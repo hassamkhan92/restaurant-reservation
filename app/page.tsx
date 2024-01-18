@@ -1,13 +1,19 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Header from './components/Header';
+import NavBar from './components/NavBar';
+import RestaurantCard from './components/RestaurantCard';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1 className='text-blue-400 text-3xl'>Test</h1>
+    <main className="bg-gray-100 min-h-screen w-screen">
+      <main className="max-w-screen-2xl m-auto bg-white">
+        <NavBar />
+        <main>
+          <Header />
+          <div className="py-3 px-36 mt-10 flex flex-wrap justify-center">
+            <RestaurantCard />
+          </div>
+        </main>
+      </main>
     </main>
-  )
+  );
 }
